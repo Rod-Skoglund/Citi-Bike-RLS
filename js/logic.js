@@ -126,7 +126,6 @@ d3.json(url, function(response) {
   for (var i = 0; i < data.length; i++) {
 
     // Set the data location property to a variable
-    // var location = response[i].location;
     var station = data[i];
 
     // Check for station property
@@ -134,7 +133,7 @@ d3.json(url, function(response) {
 
       // Add a new marker to the cluster group and bind a pop-up
       markers.addLayer(L.marker([station.lat, station.lon])
-        .bindPopup("<h1>" + station.name + "</h1> <hr> <h2>Capacity: " + station.capacity + "</h2>"));
+        .bindPopup("<h2>" + station.name + "</h2> <hr> <h3>Station ID: " + station.station_id + "<br>Capacity: " + station.capacity + "</h3>"));
     }
 
   }
