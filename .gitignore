@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# config.js
+config.js
 
 .ipynb_checkpoints/
